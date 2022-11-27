@@ -1,0 +1,229 @@
+/* google-fonts popping */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;1,500&display=swap');
+
+:root{
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, .18);
+  --color-primary-variant: #111e88;
+  --color-darc-variant: #677483;
+  --color-bg: #f6f6f9;
+
+  --card-border-radius: 2rem;
+  --boder-radius-1: 0.4rem;
+  --boder-radius-1: 0.8rem;
+  --boder-radius-1: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 14px;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins, sans-serif;
+  font-size: 0.88rem;
+  background-color: var(--color-bg);
+  user-select: none;
+  overflow-x: hidden;
+}
+
+a{
+  color: var(--color-dark);
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+h1{
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2{
+  font-size: 1.4rem;
+}
+
+h3{
+  font-size: 0.87rem;
+}
+
+h4{
+  font-size: 0.8rem;
+}
+
+h5{
+  font-size: 0.77rem;
+}
+
+small{
+  font-size: 0.75rem;
+}
+
+.profile-photo{
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text-muted{
+  color: var(--color-info-dark);
+}
+
+p{
+  color: var(--color-darc-variant);
+}
+
+b{
+  color: var(--color-dark);
+}
+
+.primary{
+  color: var(--color-primary);
+}
+
+.dander{
+  color: var(--color-danger);
+}
+
+.success{
+  color: var(--color-success);
+}
+
+.warning{
+  color: var(--color-warning);
+}
+
+.container{
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: 16rem auto 23rem;
+  width: 96%;
+  margin: 0 auto;
+}
+
+/* ======================= ASIDE =======================*/
+aside{
+  height: 100vh;
+}
+
+aside .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+
+aside .logo{
+  display: flex;
+  gap: .8rem;
+}
+
+aside .logo h2{
+  align-self: flex-end;
+}
+
+aside .logo img{
+  width: 4rem;
+  height: 4rem;
+  filter: invert(81%) sepia(61%) saturate(5452%) hue-rotate(312deg) brightness(104%) contrast(102%);
+}
+
+aside .close{
+  display: none;
+}
+
+/* ======================= SIDEBAR =======================*/
+aside .sidebar{
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+  top: 3rem;
+}
+
+aside h3{
+  font-weight: 500;
+}
+
+aside .sidebar a{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 2rem;
+  height: 3.7rem;
+  position: relative;
+  color: var(--color-info-dark);
+  transition: all .3s ease;
+}
+
+aside .sidebar a span {
+  font-size: 1.6rem;
+  transition: all .3s ease;
+}
+
+aside .sidebar a:last-child{
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+
+aside .sidebar a.active{
+  margin-left: 0;
+  color: var(--color-primary);
+  background-color: var(--color-light);
+}
+
+aside .sidebar a.active::before{
+  content: '';
+  width: 6px;
+  height: 100%;
+  background-color: var(--color-primary);
+} 
+
+aside .sidebar a.active span{
+  margin-left: calc(1rem - 3px);
+  color: var(--color-primary);
+}
+
+aside .sidebar a:hover{
+  color: var(--color-primary);
+}
+
+aside .sidebar a:hover span{
+  margin-left: 1rem;
+}
+
+aside .sidebar .message-count{
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: var(--boder-radius-1);
+  color: var(--color-white);
+  background-color: var(--color-danger);
+}
