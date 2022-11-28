@@ -21,3 +21,18 @@ theme.addEventListener('click', () => {
   sun.classList.toggle('active');
   moon.classList.toggle('active');
 });
+
+// Заполнение таблицы
+Orders.forEach(order => {
+  const tr = document.createElement('tr');
+  const tdContent = `<td>${order.product}</td>
+                    <td>${order.id}</td>
+                    <td>${order.pay}</td>
+                    <td class="${order.logistic.includes('Отклонен')? 
+                              'dander' : order.logistic.includes('Ожидание')?
+                               'warning' : 'primary'}">${order.logistic}</td>
+                    <td class='primary'>Детали</td>`;
+
+  tr.innerHTML = tdContent ;
+  document.querySelector('table tbody').appendChild(tr);                            
+});
