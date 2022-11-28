@@ -529,3 +529,65 @@ main .recent-orders a{
   align-items: center;
   gap: .7rem;
 }
+
+/* ======================= MEDIA FOR TABLE =======================*/
+@media screen and (max-width: 1200px) {
+  body{
+    background-color: rgb(239, 225, 20);
+  }
+
+  .container{
+    width: 94%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+
+  aside .logo h2{
+    display: none;
+  }
+
+  aside .sidebar h3{
+    display: none;
+  }
+
+  aside .sidebar a{
+    width: 5.6rem;
+  }
+
+  aside .sidebar a:last-child{
+    position: relative;
+    margin-top: 1.8rem;
+  }
+
+  main .finance{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  main .recent-orders{
+    width: 94%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 2rem 0 0 8.8rem;
+  }
+
+  main .recent-orders table{
+    width: 83vw;
+  }
+
+  main table thead tr th:first-child,
+  main table thead tr th:last-child{
+    display: none;
+  }
+
+  main table tbody tr td:first-child,
+  main table tbody tr td:last-child{
+    display: none;
+  }
+}
+
+/* display: grid;
+  gap: 1.8rem;
+  grid-template-columns: 16rem auto 23rem;
+  width: 96%;
+  margin: 0 auto; */
