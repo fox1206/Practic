@@ -595,7 +595,7 @@ main .recent-orders a{
 
   aside{
     position: fixed;
-    left: 0;
+    left: -100%;
     width: 18rem;
     height: 100vh;
     padding-right: var(--card-padding);
@@ -603,6 +603,14 @@ main .recent-orders a{
     background-color: var(--color-white);
     z-index: 3;
     display: none;
+    animation: show .4s ease forwards;
+  }
+
+  /* Анимация для бокового меню */
+  @keyframes show {
+    to{
+      left: 0;
+    }
   }
 
    aside .logo{
