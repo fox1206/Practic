@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+  <div class="container">
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <img src="assets/logotype.svg" alt="logo">
+          <h2>RED <span class="dander">FOXI</span></h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-symbols-outlined">close</span>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <a class="active" href="#">
+          <span class="material-symbols-outlined">grid_view</span>
+          <h3>Главная</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">person</span>
+          <h3>Клиенты</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">list_alt</span>
+          <h3>Заказы</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">insights</span>
+          <h3>Аналитика</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">mail</span>
+          <h3>Сообщения</h3>
+          <span class="message-count">30</span>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">inventory</span>
+          <h3>Товары</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">report</span>
+          <h3>Отчеты</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">settings</span>
+          <h3>Настройки</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">add</span>
+          <h3>Добавить продукты</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">logout</span>
+          <h3>Выход</h3>
+        </a>
+      </div>
+    </aside>
+
+    <main>
+      <h1>Главная</h1>
+      <div class="date">
+        <input type="date">
+      </div>
+      <div class="finance">
+        <div class="sales">
+          <span class="material-symbols-sharp">analytics</span>
+          <div class="middle">
+            <div class="left">
+              <h3>Продажи</h3>
+              <h1>$25.035</h1>
+            </div>
+            <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="36"></circle>
+              </svg>
+              <div class="number">
+                <p>81%</p>
+              </div>
+            </div>
+          </div>
+          <small class="text-muted">Последние данные</small>
+        </div>
+
+        <div class="expenses">
+          <span class="material-symbols-sharp">bar_chart</span>
+          <div class="middle">
+            <div class="left">
+              <h3>Расходы</h3>
+              <h1>$15.015</h1>
+            </div>
+            <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="36"></circle>
+              </svg>
+              <div class="number">
+                <p>81%</p>
+              </div>
+            </div>
+          </div>
+          <small class="text-muted">Последние данные</small>
+        </div>
+
+        <div class="income">
+          <span class="material-symbols-sharp">stacked_line_chart</span>
+          <div class="middle">
+            <div class="left">
+              <h3>Доходы</h3>
+              <h1>$10.02</h1>
+            </div>
+            <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="36"></circle>
+              </svg>
+              <div class="number">
+                <p>57%</p>
+              </div>
+            </div>
+          </div>
+          <small class="text-muted">Последние данные</small>
+        </div>
+      </div>
+
+      <div class="recent-orders">
+        <h2>Последние заказы</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Наименование товара</th>
+              <th>Номер товара</th>
+              <th>Оплата</th>
+              <th>Статус отгрузки</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td>Asus</td>
+              <td>95123</td>
+              <td>Ожидает оплаты</td>
+              <td class="warning">Ожидание</td>
+              <td class="primary">Детали</td>
+            </tr>
+            <tr>
+              <td>Sony</td>
+              <td>847856</td>
+              <td>Возврат</td>
+              <td class="dander">Отклонен</td>
+              <td class="primary">Детали</td>
+            </tr>
+            <tr>
+              <td>Samsung</td>
+              <td>77023</td>
+              <td>Ожидает оплаты</td>
+              <td class="warning">Ожидание</td>
+              <td class="primary">Детали</td>
+            </tr>
+            <tr>
+              <td>Philips</td>
+              <td>999923</td>
+              <td>Оплачено</td>
+              <td class="primary">Доставлено</td>
+              <td class="primary">Детали</td>
+            </tr>
+            <tr>
+              <td>Toshiba</td>
+              <td>569874</td>
+              <td>Оплачено</td>
+              <td class="primary">Доставлено</td>
+              <td class="primary">Детали</td>
+            </tr>
+            <tr>
+              <td>Lenovo</td>
+              <td>123698</td>
+              <td>Возврат</td>
+              <td class="dander">Отклонен</td>
+              <td class="primary">Детали</td>
+            </tr> -->
+          </tbody>
+        </table>
+        <a href="#">Показать все</a>
+      </div>
+    </main>
+
+    <div class="right">
+      <div class="top">
+        <button id="menu-btn">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        <div class="theme">
+          <span class="material-symbols-outlined active">light_mode</span>
+          <span class="material-symbols-outlined">nightlight</span>
+        </div>
+        <div class="profile">
+          <div class="info">
+            <p>Привет, <b class="dander">RED FOXI</b></p>
+            <small class="text-muted">Администратор</small>
+          </div>
+          <div class="profile-photo">
+            <img src="assets/avatar.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="recent-updates">
+        <h2>Последние события</h2>
+        <div class="updates">
+          <div class="update">
+            <div class="profile-photo">
+              <img src="assets/avatar.png">
+            </div>
+            <div class="message">
+              <p><b>Мистер Алекс</b> оформил заказ на телевизоры Philips</p>
+              <small class="text-muted">15 минут назад</small>
+            </div>
+          </div>
+          <div class="update">
+            <div class="profile-photo">
+              <img src="assets/avatar.png">
+            </div>
+            <div class="message">
+              <p><b>Мистер Григориан</b> отклонил заявку на смартфоны Sony</p>
+              <small class="text-muted">21 минуту назад</small>
+            </div>
+          </div>
+          <div class="update">
+            <div class="profile-photo">
+              <img src="assets/avatar.png">
+            </div>
+            <div class="message">
+              <p><b>Мистер Смитт</b> оформил заказ на планшеты Lenovo</p>
+              <small class="text-muted">34 минуты назад</small>
+            </div>
+          </div>
+          <div class="update">
+            <div class="profile-photo">
+              <img src="assets/avatar.png">
+            </div>
+            <div class="message">
+              <p><b>Мистер Джонс</b> оформил заказ на ноутбуки Asus</p>
+              <small class="text-muted">37 минут назад</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sales-analitic">
+        <h2>Аналитика продаж</h2>
+        <div class="item online">
+          <div class="icon">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </div>
+          <div class="right">
+            <div class="info">
+              <h3>ONLINE ЗАКАЗЫ</h3>
+              <small class="text-muted">За последние 24 часа</small>
+            </div>
+            <h5 class="success">+40%</h5>
+            <h3>345</h3>
+          </div>
+        </div>
+
+        <div class="item offline">
+          <div class="icon">
+            <span class="material-symbols-outlined">local_mall</span>
+          </div>
+          <div class="right">
+            <div class="info">
+              <h3>OFFLINE ЗАКАЗЫ</h3>
+              <small class="text-muted">За последние 24 часа</small>
+            </div>
+            <h5 class="dander">-10%</h5>
+            <h3>500</h3>
+          </div>
+        </div>
+
+        <div class="item customers">
+          <div class="icon">
+            <span class="material-symbols-outlined">person_filled</span>
+          </div>
+          <div class="right">
+            <div class="info">
+              <h3>Новые клиенты</h3>
+              <small class="text-muted">За последние 24 часа</small>
+            </div>
+            <h5 class="success">+26%</h5>
+            <h3>97</h3>
+          </div>
+        </div>
+        <div class="item add-products">
+          <div>
+            <span class="material-symbols-outlined">add</span>
+            <h3>Добавить категорию</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
